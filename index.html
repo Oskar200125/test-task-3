@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <!-- Table -->
+    <div class="container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Показатель</th>
+                    <th>Текущий день</th>
+                    <th>Вчера</th>
+                    <th>Этот день недели</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-values="[500521, 480521, 4805121]">
+                    <td>Выручка, руб</td>
+                    <td>500 521</td>
+                    <td class="table__green">
+                        <div class="table__inner">
+                            <p>480 521</p>
+                            <span class="table__positive">4%</span>
+                        </div>
+                    </td>
+                    <td class="table__red">4 805 121</td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <div id="chartContainer"></div>
+                    </td>
+                </tr>
+
+                <tr data-values="[300000, 300000, 300000]">
+                    <td>Наличные</td>
+                    <td>300 000</td>
+                    <td class="table__green">300 000 <span class="table__positive">0%</span></td>
+                    <td>300 000</td>
+                </tr>
+                <tr data-values="[100000, 100000, 100000]">
+                    <td>Безналичный расчет</td>
+                    <td>100 000</td>
+                    <td class="table__green">100 000 <span class="table__positive">0%</span></td>
+                    <td>100 000</td>
+                </tr>
+                <tr data-values="[100521, 100521, 100521]">
+                    <td>Кредитные карты</td>
+                    <td>100 521</td>
+                    <td class="table__green">100 521 <span class="table__positive">0%</span></td>
+                    <td>100 521</td>
+                </tr>
+                <tr data-values="[1300, 900, 900]">
+                    <td>Средний чек, руб</td>
+                    <td>1300</td>
+                    <td class="table__green">900 <span class="table__positive">44%</span></td>
+                    <td class="table__green">900</td>
+                </tr>
+                <tr data-values="[1200, 800, 800]">
+                    <td>Средний гость, руб</td>
+                    <td>1200</td>
+                    <td class="table__green">800 <span class="table__positive">50%</span></td>
+                    <td class="table__green">800</td>
+                </tr>
+                <tr data-values="[1000, 1100, 900]">
+                    <td>Удаление из чека (после оплаты), руб</td>
+                    <td>1000</td>
+                    <td class="table__red">1100 <span class="table__negative">-9%</span></td>
+                    <td class="table__green">900</td>
+                </tr>
+                <tr data-values="[1300, 1300, 900]">
+                    <td>Удаление из чека (до оплаты), руб</td>
+                    <td>1300</td>
+                    <td class="table__green">1300 <span class="table__positive">0%</span></td>
+                    <td class="table__green">900</td>
+                </tr>
+                <tr data-values="[34, 36, 34]">
+                    <td>Количество чеков</td>
+                    <td>34</td>
+                    <td class="table__red">36 <span class="table__negative">-6%</span></td>
+                    <td>34</td>
+                </tr>
+                <tr data-values="[34, 36, 32]">
+                    <td>Количество гостей</td>
+                    <td>34</td>
+                    <td class="table__red">36 <span class="table__negative">-6%</span></td>
+                    <td class="table__green">32</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
